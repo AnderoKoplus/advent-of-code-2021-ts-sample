@@ -2,6 +2,7 @@
 FROM node:14-buster-slim AS build
 COPY . /app
 WORKDIR /app
+RUN yarn install
 RUN yarn build
 
 # run phase
